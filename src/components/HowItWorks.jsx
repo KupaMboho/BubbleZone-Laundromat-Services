@@ -24,7 +24,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="py-20 bg-sky-light">
+    <section className="py-16 sm:py-20 bg-sky-light">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -34,10 +34,10 @@ export default function HowItWorks() {
           className="text-center mb-14"
         >
           <span className="text-accent font-accent font-semibold text-sm uppercase tracking-wider">How It Works</span>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-primary-dark mt-2 mb-4">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-primary-dark mt-2 mb-4">
             Three Simple Steps
           </h2>
-          <p className="text-text-light max-w-xl mx-auto font-body">
+          <p className="text-text-light max-w-xl mx-auto font-body text-sm sm:text-base">
             Getting fresh, clean laundry has never been easier.
           </p>
         </motion.div>
@@ -56,11 +56,11 @@ export default function HowItWorks() {
               sizes="(max-width: 768px) 400px, 800px"
               alt="Person dropping off laundry"
               loading="lazy"
-              className="w-full h-80 md:h-full object-cover"
+              className="w-full h-56 sm:h-80 md:h-full object-cover"
             />
           </motion.div>
 
-          <div className="order-1 md:order-2 space-y-6">
+          <div className="order-1 md:order-2 space-y-4 sm:space-y-6">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -68,15 +68,15 @@ export default function HowItWorks() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="flex gap-5 items-start bg-white rounded-xl p-5 shadow-card hover:shadow-card-hover transition-shadow"
+                className="flex gap-3 sm:gap-5 items-start bg-white rounded-xl p-4 sm:p-5 shadow-card hover:shadow-card-hover transition-shadow"
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
-                  <step.icon className="text-accent text-xl" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                  <step.icon className="text-accent text-base sm:text-xl" />
                 </div>
                 <div>
-                  <span className="text-accent font-accent font-bold text-xs">{step.number}</span>
-                  <h3 className="font-heading font-bold text-lg text-primary-dark">{step.title}</h3>
-                  <p className="text-text-light font-body text-sm">{step.description}</p>
+                  <span className="text-accent font-accent font-bold text-[10px] sm:text-xs">{step.number}</span>
+                  <h3 className="font-heading font-bold text-base sm:text-lg text-primary-dark">{step.title}</h3>
+                  <p className="text-text-light font-body text-xs sm:text-sm">{step.description}</p>
                 </div>
               </motion.div>
             ))}

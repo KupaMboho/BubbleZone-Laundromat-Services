@@ -4,7 +4,7 @@ import HowItWorks from '../components/HowItWorks';
 import PriceList from '../components/PriceList';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Testimonials from '../components/Testimonials';
-import ContactForm from '../components/ContactForm';
+import ContactInfo from '../components/ContactInfo';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <PriceList />
       <WhyChooseUs />
       <Testimonials />
-      <ContactForm />
+      <ContactInfo />
     </main>
   );
 }

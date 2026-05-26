@@ -18,19 +18,19 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-accent font-accent font-semibold text-sm uppercase tracking-wider">About Us</span>
-            <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-dark mt-2 mb-6">
+            <span className="text-accent font-accent font-semibold text-xs sm:text-sm uppercase tracking-wider">About Us</span>
+            <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-primary-dark mt-2 mb-6">
               About BubbleZone
             </h1>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <p className="font-body text-text-light mb-4">
+              <p className="font-body text-text-light text-sm sm:text-base mb-4">
                 BubbleZone Laundromat Services & Dry Cleaning is your trusted partner for all laundry needs in Florida, Roodepoort. We combine professional expertise with genuine care for your garments.
               </p>
               <p className="font-body text-text-light mb-4">
@@ -53,7 +53,7 @@ export default function About() {
                 sizes="(max-width: 768px) 400px, 800px"
                 alt="Laundry interior"
                 loading="lazy"
-                className="w-full h-80 object-cover"
+                className="w-full h-64 sm:h-80 object-cover"
               />
             </motion.div>
           </div>
@@ -66,12 +66,12 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-heading font-extrabold text-3xl text-center text-primary-dark mb-12"
+            className="font-heading font-extrabold text-2xl sm:text-3xl text-center text-primary-dark mb-8 sm:mb-12"
           >
             Our Values
           </motion.h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {values.map((v, i) => (
               <motion.div
                 key={i}
@@ -79,7 +79,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-sky-light rounded-xl p-6 text-center shadow-card hover:shadow-card-hover transition-shadow"
+                className="bg-sky-light rounded-xl p-4 sm:p-6 text-center shadow-card hover:shadow-card-hover transition-shadow"
               >
                 <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
                   <v.icon className="text-accent text-xl" />
@@ -99,10 +99,10 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-heading font-extrabold text-3xl text-primary-dark mb-4">
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-primary-dark mb-4">
               Ready to Experience the BubbleZone Difference?
             </h2>
-            <p className="text-text-light font-body mb-6 max-w-lg mx-auto">
+            <p className="text-text-light font-body text-sm sm:text-base mb-6 max-w-lg mx-auto">
               Drop off your laundry today and let us take care of the rest.
             </p>
             <a

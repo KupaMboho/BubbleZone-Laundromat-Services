@@ -28,29 +28,28 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-primary shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="bg-primary-dark text-white text-sm py-1.5 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-end gap-6">
-          <a href="tel:0659468671" className="flex items-center gap-1.5 hover:text-accent transition-colors">
-            <FaPhone size={12} /> 065 946 8671
+      <div className="bg-primary-dark text-white text-xs sm:text-sm py-1.5">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center sm:justify-end gap-4 sm:gap-6">
+          <a href="tel:0659468671" className="flex items-center gap-1 hover:text-accent transition-colors whitespace-nowrap">
+            <FaPhone size={10} className="sm:hidden" /><span className="hidden sm:inline"><FaPhone size={12} /></span> 065 946 8671
           </a>
-          <a href="https://wa.me/27659468671" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-accent transition-colors">
-            <FaWhatsapp size={14} /> WhatsApp
+          <span className="text-white/30 hidden sm:inline">|</span>
+          <a href="https://wa.me/27659468671" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-accent transition-colors whitespace-nowrap">
+            <FaWhatsapp size={12} className="sm:hidden" /><span className="hidden sm:inline"><FaWhatsapp size={14} /></span> WhatsApp
           </a>
         </div>
       </div>
 
-      <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center">
-            <span className="text-primary-dark font-heading font-extrabold text-lg">B</span>
-          </div>
-          <div className="hidden sm:block">
-            <h1 className={`font-heading font-bold text-lg leading-tight transition-colors ${
+      <nav className="max-w-7xl mx-auto px-4 py-2 sm:py-3 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-1.5 sm:gap-2">
+          <img src="/logo_1.png" alt="BubbleZone Logo" className="h-8 sm:h-10 w-auto" />
+          <div>
+            <h1 className={`font-heading font-bold text-sm sm:text-lg leading-tight transition-colors ${
               scrolled ? 'text-white' : 'text-primary'
             }`}>
               BubbleZone
             </h1>
-            <p className={`text-[10px] leading-tight transition-colors ${
+            <p className={`text-[8px] sm:text-[10px] leading-tight transition-colors ${
               scrolled ? 'text-accent' : 'text-primary-light'
             }`}>
               Laundromat Services

@@ -21,7 +21,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -31,15 +31,15 @@ export default function Testimonials() {
           className="text-center mb-14"
         >
           <span className="text-accent font-accent font-semibold text-sm uppercase tracking-wider">Testimonials</span>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-primary-dark mt-2 mb-4">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-primary-dark mt-2 mb-4">
             What Our Customers Say
           </h2>
-          <p className="text-text-light max-w-xl mx-auto font-body">
+          <p className="text-text-light max-w-xl mx-auto font-body text-sm sm:text-base">
             Don't just take our word for it — hear from the Roodepoort community.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {testimonials.map((t, index) => (
             <motion.div
               key={index}

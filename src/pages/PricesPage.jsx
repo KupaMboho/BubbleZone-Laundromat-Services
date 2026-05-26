@@ -12,11 +12,11 @@ export default function PricesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-4"
           >
-            <span className="text-accent font-accent font-semibold text-sm uppercase tracking-wider">Pricing</span>
-            <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-dark mt-2 mb-4">
+            <span className="text-accent font-accent font-semibold text-xs sm:text-sm uppercase tracking-wider">Pricing</span>
+            <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-primary-dark mt-2 mb-4">
               Our Price List
             </h1>
-            <p className="text-text-light max-w-xl mx-auto font-body">
+            <p className="text-text-light max-w-xl mx-auto font-body text-sm sm:text-base">
               Affordable, transparent pricing — no surprises, just clean clothes.
             </p>
           </motion.div>

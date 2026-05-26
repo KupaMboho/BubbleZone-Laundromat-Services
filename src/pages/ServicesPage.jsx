@@ -58,23 +58,23 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <span className="text-accent font-accent font-semibold text-sm uppercase tracking-wider">What We Offer</span>
-            <h1 className="font-heading font-extrabold text-4xl md:text-5xl text-primary-dark mt-2 mb-4">
+            <span className="text-accent font-accent font-semibold text-xs sm:text-sm uppercase tracking-wider">What We Offer</span>
+            <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-primary-dark mt-2 mb-4">
               Our Services
             </h1>
-            <p className="text-text-light max-w-xl mx-auto font-body">
+            <p className="text-text-light max-w-xl mx-auto font-body text-sm sm:text-base">
               From everyday laundry to specialist dry cleaning — we handle it all with professional care.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((svc, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="bg-white rounded-xl shadow-card hover:shadow-card-hover p-6 border border-gray-100 transition-all hover:-translate-y-1"
+                className="bg-white rounded-xl shadow-card hover:shadow-card-hover p-4 sm:p-6 border border-gray-100 transition-all hover:-translate-y-1"
               >
                 <div className="w-14 h-14 rounded-xl bg-sky-light flex items-center justify-center mb-4">
                   <svc.icon className="text-primary-light text-xl" />
@@ -109,10 +109,10 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-heading font-extrabold text-3xl text-primary-dark mb-4">
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-primary-dark mb-4">
               Not Sure Which Service You Need?
             </h2>
-            <p className="text-text-light font-body mb-6 max-w-lg mx-auto">
+            <p className="text-text-light font-body text-sm sm:text-base mb-6 max-w-lg mx-auto">
               Give us a call — we'll recommend the best option for your garments.
             </p>
             <a

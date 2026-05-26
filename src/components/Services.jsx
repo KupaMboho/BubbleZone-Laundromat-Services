@@ -48,7 +48,7 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -58,48 +58,15 @@ export default function Services() {
           className="text-center mb-14"
         >
           <span className="text-accent font-accent font-semibold text-sm uppercase tracking-wider">Our Services</span>
-          <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-primary-dark mt-2 mb-4">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl md:text-4xl text-primary-dark mt-2 mb-4">
             Professional Laundry Services
           </h2>
-          <p className="text-text-light max-w-xl mx-auto font-body">
+          <p className="text-text-light max-w-xl mx-auto font-body text-sm sm:text-base">
             From everyday laundry to delicate dry cleaning, we handle everything with care.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-2 lg:row-span-1 rounded-2xl overflow-hidden relative h-64 md:h-auto"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
-              srcSet="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=70 400w, https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80 800w"
-              sizes="(max-width: 768px) 400px, 800px"
-              alt="Clean folded laundry"
-              loading="lazy"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
-              <div className="p-8 md:p-12">
-                <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-3">
-                  Quality You Can Feel
-                </h3>
-                <p className="text-white/80 font-body max-w-md mb-4">
-                  Every garment treated with care — from delicate fabrics to everyday wear.
-                </p>
-                <Link
-                  to="/services"
-                  className="inline-block bg-accent hover:bg-accent-light text-primary-dark font-accent font-semibold px-5 py-2.5 rounded-lg transition-all text-sm"
-                >
-                  View All Services
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -107,15 +74,15 @@ export default function Services() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="group bg-white rounded-xl shadow-card hover:shadow-card-hover p-6 border border-gray-100 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white rounded-xl shadow-card hover:shadow-card-hover p-4 sm:p-6 border border-gray-100 transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
-              <div className="w-14 h-14 rounded-xl bg-sky-light flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                <service.icon className="text-primary-light text-xl group-hover:text-accent transition-colors" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-sky-light flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-accent/20 transition-colors">
+                <service.icon className="text-primary-light text-lg sm:text-xl group-hover:text-accent transition-colors" />
               </div>
               <h3 className="font-heading font-bold text-lg text-primary-dark mb-2">
                 {service.title}
               </h3>
-              <p className="text-text-light font-body text-sm mb-3">
+              <p className="text-text-light font-body text-sm mb-3 flex-grow">
                 {service.description}
               </p>
               <p className="text-accent font-accent font-semibold text-sm">

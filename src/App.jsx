@@ -9,14 +9,14 @@ const About = lazy(() => import('./pages/About'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const PricesPage = lazy(() => import('./pages/PricesPage'));
 const Contact = lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 
 function LoadingFallback() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-sky-light">
       <div className="text-center">
-        <div className="w-16 h-16 rounded-full bg-gradient-gold flex items-center justify-center mx-auto mb-4 animate-pulse">
-          <span className="text-primary-dark font-heading font-extrabold text-2xl">B</span>
-        </div>
+        <img src="/logo_1.png" alt="BubbleZone Logo" className="h-16 w-auto mx-auto mb-4 animate-pulse" />
         <p className="text-primary-dark font-body font-semibold">Loading...</p>
       </div>
     </div>
@@ -35,6 +35,8 @@ export default function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/prices" element={<PricesPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsConditions />} />
         </Routes>
       </Suspense>
       <Footer />

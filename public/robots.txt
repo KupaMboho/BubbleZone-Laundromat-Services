@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /.env
+Allow: /
+
+Sitemap: https://bubblezone-laundromat.vercel.app/sitemap.xml

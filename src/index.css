@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1A3A5C;
+  --primary-dark: #0D2137;
+  --primary-light: #1565C0;
+  --accent: #F5A623;
+  --accent-light: #FFD166;
+  --sky-light: #E8F4FD;
+  --text-light: #6B7C93;
+  --text-dark: #0D2137;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.accent-font {
+  font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 20px rgba(26, 58, 92, 0.08);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 8px 30px rgba(26, 58, 92, 0.15);
+  }
+}
+
+@keyframes bubble {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(21, 101, 192, 0.15), rgba(26, 58, 92, 0.05));
+  pointer-events: none;
+}
+
+.bubble-1 {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  left: 5%;
+  animation: bubble 4s ease-in-out infinite;
+}
+
+.bubble-2 {
+  width: 40px;
+  height: 40px;
+  top: 30%;
+  right: 10%;
+  animation: bubble 5s ease-in-out 1s infinite;
+}
+
+.bubble-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 15%;
+  animation: bubble 6s ease-in-out 0.5s infinite;
+}
+
+.bubble-4 {
+  width: 50px;
+  height: 50px;
+  top: 60%;
+  right: 5%;
+  animation: bubble 4.5s ease-in-out 1.5s infinite;
+}
+
+.bubble-5 {
+  width: 30px;
+  height: 30px;
+  top: 15%;
+  left: 30%;
+  animation: bubble 3.5s ease-in-out 0.8s infinite;
+}
+
+.bubble-6 {
+  width: 45px;
+  height: 45px;
+  bottom: 35%;
+  right: 20%;
+  animation: bubble 5.5s ease-in-out 2s infinite;
+}
